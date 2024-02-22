@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DncWeather | Felipe Destro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body class="bg-body-secondary">
+    <!-- Navbar - Header -->
+    <nav class="navbar navbar-expand-lg bg-primary px-1">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand text-white fs-3" href="#">DncWeather</a>
+        <div class="navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#busca-cep">Endereço</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="#previsao"
+                >Previsão do Tempo</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Container / Form -->
+    <div class="container-fluid px-5 mt-5">
+      <div class="row row-cols-auto align-items-center justify-content-center">
+        <span class="col">
+          <h1>
+            Descubra Mais com Precisão: <br />
+            Previsões do Tempo e endereços <br />
+            em tempo real.
+          </h1>
+        </span>
+        <span class="col">
+          <img src="./assets/temp.svg" alt="icon temp" style="height: 180" />
+        </span>
+      </div>
+
+      <!-- Form -->
+      <div class="container-fluid container">
+        <form action="" id="dateForm" class="needs-validation" novalidate>
+          <!-- FORM GROUP -->
+          <div class="form-group">
+            <label for="frist-name" class="form-label">Primeiro Nome:</label>
+            <input
+              id="frist-name"
+              type="text"
+              name="frist-name"
+              class="form-control"
+              placeholder="Primeiro Nome"
+              required
+            />
+            <div class="invalid-feedback">Campo obrigatório!</div>
+            <label for="frist-name" class="form-label">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              class="form-control"
+              placeholder="E-mail"
+              autocomplete="email"
+              required
+            />
+            <div class="invalid-feedback">Campo obrigatório!</div>
+            <label for="frist-name" class="form-label">Digite o CEP:</label>
+            <input
+              id="cep"
+              type="text"
+              name="cep"
+              class="form-control"
+              placeholder="CEP"
+              required
+            />
+            <div class="invalid-feedback">Campo obrigatório!</div>
+            <!-- LAT LONG -->
+            <label class="form-label" for="latitude"
+              >Digite a latitude e longitude para saber a previsão:</label
+            >
+            <div class="row" name="location">
+              <div class="col">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="latitude"
+                  id="latitude"
+                  placeholder="Latitude"
+                  required
+                />
+                <div class="invalid-feedback">Campo obrigatório!</div>
+              </div>
+              <div class="col">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="longitude"
+                  id="longitude"
+                  placeholder="Longitude"
+                  required
+                />
+                <div class="invalid-feedback">Campo obrigatório!</div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Acessar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- RESULADO CEP -->
+    <div class="container-fluid container-cep" id="busca-cep">
+      <div class="row row-cols-auto align-items-center justify-content-center">
+        <h1>Resultado da busca do CEP:</h1>
+        <img src="./assets/locale.svg" alt="icon locale" />
+      </div>
+      <!-- TABLE CEP -->
+      <table class="table table-borderless">
+        <thead id="table">
+          <tr>
+            <th scope="col">Logradouro/Nome</th>
+            <th scope="col">Bairro/Distrito</th>
+            <th scope="col">Localidade/UF</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="dataLogradouro">-</td>
+            <td id="dataBairro">-</td>
+            <td id="dataUF">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PREVISÃO DO TEMPO -->
+    <div class="container-fluid conatiner-temp" id="previsao">
+      <div class="row row-cols-auto justify-content-center align-items-center">
+        <h1>Previsão do tempo na região</h1>
+        <img src="./assets/rain.svg" alt="icon rain" />
+      </div>
+      <div class="result">
+        <p id="temp">-</p>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+      <ul class="nav justify-content-end align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Termos de Uso</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">|</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Política de Privacidade</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/validation.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

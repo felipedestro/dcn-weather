@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  font-weight: 800;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+.bg-body-secondary {
+  background-color: #bababa;
+}
+
+.container {
+  margin-top: 100px;
+  width: 859px;
+  border-radius: 30px;
+  background-color: white;
+  padding: 70px 125px;
+}
+
+label {
+  margin-top: 39px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form-control {
+  background: #f2f2f2e5;
+}
+
+.btn {
+  margin: 50px 0;
+  border-radius: 10px;
+  width: 609px;
+  height: 50px;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container-cep {
+  margin-top: 200px;
+  margin-bottom: 18px;
+}
+
+.table {
+  width: 1024px;
+  margin: 18px auto;
+  border: 0px;
+  border-collapse: collapse;
+}
+
+.table thead tr th {
+  padding: 20px 30px;
+  background-color: #0c70f2;
+
+  color: white;
+}
+
+.table tbody tr td {
+  padding: 20px 31px;
+  font-weight: 600;
+}
+
+thead tr:first-child th:first-child {
+  border-top-left-radius: 15px;
+}
+
+thead tr:last-child th:last-child {
+  border-top-right-radius: 15px;
+}
+
+tbody tr:first-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+.conatiner-temp {
+  margin-top: 200px;
+}
+
+.result {
+  border: 2px solid #0c70f2;
+  border-radius: 30px;
+
+  width: 1024px;
+  height: 60px;
+  margin: 40px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+}
+
+.result p {
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+
+  margin: 0;
+}
+
+.result {
+  margin-bottom: 200px;
+}
+
+footer {
+  height: 80px;
+  background-color: #0c70f2;
+
+  display: flex;
+  justify-content: end;
+}
+
+footer a {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 600;
+}
