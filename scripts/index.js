@@ -1,3 +1,5 @@
+// BUSCAR E SETAR A LOCALIZAÇÃO
+
 async function setPrev(latitude, longitude) {
   const temp = document.getElementById("temp");
 
@@ -11,9 +13,11 @@ async function setPrev(latitude, longitude) {
       temp.innerText = `Previsão do tempo de acordo com a região: ${data.current.temperature_2m} °C`;
     }
   } catch {
-    console.log("Error");
+    alert("Latitude e/ou Longitude não encontrados!");
   }
 }
+
+// BUSCAR E SETAR O CEP NO HTML
 
 async function setCEP(cep) {
   const longadouro = document.getElementById("dataLogradouro");
@@ -30,7 +34,7 @@ async function setCEP(cep) {
       uf.innerText = data.uf;
     }
   } catch {
-    console.log("Error");
+    alert("CEP não localizado, tente novamente!");
   }
 }
 
@@ -44,7 +48,7 @@ dateForm.addEventListener("submit", (event) => {
   const longitude = document.getElementById("longitude").value;
 
   if (cep !== "" && latitude !== "" && longitude !== "") {
-    setCEP(cep);
     setPrev(latitude, longitude);
+    setCEP(cep);
   }
 });
